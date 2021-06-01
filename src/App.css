@@ -44,3 +44,11 @@
   transition-duration: 1s;
   transform: scale(1.08);
 }
+
+.show{
+  display: block;
+}
+
+.hide {
+  display: none;
+}

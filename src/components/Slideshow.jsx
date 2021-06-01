@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { Slides } from './Slides';
 import './Carousel.css';
+import PropTypes from 'prop-types';
 
 
 const Slideshow = ({ slides, interval=3000 }) => {
   const [current, setCurrent] = useState(0);
   const length = slides.length;
 
+  // Add Prop types to to check the property types of parameter at runtime.
 
+  // Todo: Add prop types
+  // Todo: Add any video or text in slideshow
   useEffect(() => {
         const loop = setInterval(()=> {
             if(current === length - 1) {
@@ -49,6 +53,10 @@ const Slideshow = ({ slides, interval=3000 }) => {
     </>
     
   );
+};
+
+Slideshow.propTypes = {
+  slides: PropTypes.array,
 };
 
 export default Slideshow;
